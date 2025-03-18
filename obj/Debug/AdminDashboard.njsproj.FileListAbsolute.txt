@@ -1,0 +1,3 @@
+C:\Users\aalpe\source\repos\AdminDashboard\obj\Debug\AdminDashboard.njsproj.AssemblyReference.cache
+C:\Users\aalpe\source\repos\AdminDashboard\obj\Debug\AdminDashboard.njsproj.CoreCompileInputs.cache
+C:\Users\aalpe\source\repos\AdminDashboard\bin\Microsoft.NodejsTools.WebRole.dll

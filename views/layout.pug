@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title NESLI ANA
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    link(rel="stylesheet" href="/stylesheets/toggle.css")
+  body
+    header
+      nav
+        .navbar
+          img.logo(src="/images/logo-removebg-preview.png", alt="Company Logo")
+          span.project-title NESLI ANA
+          a(href="/", class= (typeof activePage !== 'undefined' && activePage === 'robotStatus' || typeof activePage === 'undefined') ? 'active' : '') Robot Status
+          a(href="/controlPanel", class= (typeof activePage !== 'undefined' && activePage === 'controlPanel') ? 'active' : '') Control Panel
+          a(href="/operations", id="operations-nav-item", class= (typeof activePage !== 'undefined' && activePage === 'operations') ? 'active' : '') Operations
+          a(href="/logs", class= (typeof activePage !== 'undefined' && activePage === 'logs') ? 'active' : '') Logs
+          a(href="/label", class= (typeof activePage !== 'undefined' && activePage === 'label') ? 'active' : '') Label
+          a(href="/calibration", class= (typeof activePage !== 'undefined' && activePage === 'calibration') ? 'active' : '') Calibration
+          .status
+            .toggle-wrapper
+              input.toggle#navbarToggle(type="checkbox")
+              span.toggle-text.alarm ALARM
+              span.toggle-text.running RUNNING
+            span.status-description Description of the status
+    block content
+    footer
+      p &copy; 2024 Labenko Bilisim A.S.
+    
+    script(src="https://cdn.socket.io/4.7.5/socket.io.min.js")
+    script(src="/robotStatus.js")

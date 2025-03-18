@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aalpe\\source\\repos\\AdminDashboard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{939064AC-55CF-4DCF-ABA9-216E74277028}|AdminDashboard.njsproj|C:\\Users\\aalpe\\source\\repos\\adminDashboard\\public\\stylesheets\\controlPanel.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{939064AC-55CF-4DCF-ABA9-216E74277028}|AdminDashboard.njsproj|solutionrelative:public\\stylesheets\\controlPanel.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "controlPanel.css",
+              "DocumentMoniker": "C:\\Users\\aalpe\\source\\repos\\AdminDashboard\\public\\stylesheets\\controlPanel.css",
+              "RelativeDocumentMoniker": "public\\stylesheets\\controlPanel.css",
+              "ToolTip": "C:\\Users\\aalpe\\source\\repos\\AdminDashboard\\public\\stylesheets\\controlPanel.css",
+              "RelativeToolTip": "public\\stylesheets\\controlPanel.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-17T22:31:08.834Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

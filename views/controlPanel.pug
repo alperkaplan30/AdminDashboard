@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  .main-container
+    each axis in ['x', 'y', 'z', 'g', 'r1', 'r3']
+      .axis-container
+        h2= axis.toUpperCase() + " Axis"
+        .current-values
+          label(for=`${axis}-value`) Current Value (mm):
+          input(id=`current-${axis}-value`, type="text", readonly)
+          label(for=`${axis}-new-value`) New Value (mm):
+          input(id=`new-${axis}-value`, type="text")
+          button(onclick=`updateValue('${axis}')`) Update
+
+        .control-buttons
+          button(onclick=`hold('${axis}')`) Hold/On
+          button(onclick=`reset('${axis}')`) Reset
+          button(onclick=`home('${axis}')`) Home
+
+        .parameters
+          h3 Parameters
+          label(for=`${axis}-acceleration`) Acceleration:
+          input(id=`${axis}-acceleration`, type="text")
+          label(for=`${axis}-deceleration`) Deceleration:
+          input(id=`${axis}-deceleration`, type="text")
+          label(for=`${axis}-speed`) Speed:
+          input(id=`${axis}-speed`, type="text")
+          label(for=`${axis}-push-speed`) Push Speed:
+          input(id=`${axis}-push-speed`, type="text")
+          button(onclick=`updateParameters('${axis}')`) Update Parameters
+
+        .push-section
+          h3 Push
+          label(for=`${axis}-target-position`) Target Position (mm):
+          input(id=`${axis}-target-position`, type="text")
+          label(for=`${axis}-push-distance`) Push Distance (mm):
+          input(id=`${axis}-push-distance`, type="text")
+          label(for=`${axis}-push-force`) Push Force (%):
+          input(id=`${axis}-push-force`, type="text")
+          label(for=`${axis}-trigger-lv`) Trigger LV:
+          input(id=`${axis}-trigger-lv`, type="text")
+          button(onclick=`goPush('${axis}')`) Go
+
+          .result-toggle
+            label.toggle-wrapper
+              input(id=`${axis}-result`, class="toggle", type="checkbox")
+              span.toggle-slider
+              .toggle-text.empty Empty
+              .toggle-text.full Full
+      .vertical-line
+  link(rel="stylesheet" href="/stylesheets/controlPanel.css")
+  script(src="/controlPanel.js")

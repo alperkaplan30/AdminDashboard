@@ -1,0 +1,90 @@
+extends layout
+
+block content
+  .logs-container
+    .side-panel
+      .side
+        h1 Side 1
+        .panel-content
+          .left-panel
+            h2 Choose Log File
+            input#file-input1(type="file", accept=".log")
+            
+            .patient-details
+              h3 Patient Details
+              .form-group
+                label(for="patient-name1") Patient's Name:
+                input#patient-name1(type="text", readonly)
+              .form-group
+                label(for="dob1") Date of Birth:
+                input#dob1(type="date", readonly)
+              .form-group
+                label(for="entry-date1") Entry Date:
+                input#entry-date1(type="date", readonly)
+              .form-group
+                label(for="gender1") Gender:
+                input#gender1(type="text", readonly)
+
+            .order-details
+              h3 Order Details
+              .form-group
+                label(for="order-patient-name1") Patient's Name:
+                input#order-patient-name1(type="text", readonly)
+              .form-group
+                label(for="order-number1") Number:
+                input#order-number1(type="text", readonly)
+
+            .printing-status
+              h3 Printing Status
+              .form-group
+                label(for="current-prints1") How Many Current Prints:
+                input#current-prints1(type="text", placeholder="0", readonly)
+
+      .side
+        h1 Side 2
+        .panel-content
+          .left-panel
+            h2 Choose Log File
+            input#file-input2(type="file", accept=".log")
+            
+            .patient-details
+              h3 Patient Details
+              .form-group
+                label(for="patient-name2") Patient's Name:
+                input#patient-name2(type="text", readonly)
+              .form-group
+                label(for="dob2") Date of Birth:
+                input#dob2(type="date", readonly)
+              .form-group
+                label(for="entry-date2") Entry Date:
+                input#entry-date2(type="date", readonly)
+              .form-group
+                label(for="gender2") Gender:
+                input#gender2(type="text", readonly)
+
+            .order-details
+              h3 Order Details
+              .form-group
+                label(for="order-patient-name2") Patient's Name:
+                input#order-patient-name2(type="text", readonly)
+              .form-group
+                label(for="order-number2") Number:
+                input#order-number2(type="text", readonly)
+
+            .printing-status
+              h3 Printing Status
+              .form-group
+                label(for="current-prints2") How Many Current Prints:
+                input#current-prints2(type="text", placeholder="0", readonly)
+
+    .right-panel
+      h1 Log Window
+      .log-window
+        textarea#log-output(rows="30")
+      .download-log
+        button#save-log-button Save Log
+      .auto-save-toggle
+        button#auto-save-button Auto Save
+
+  link(rel="stylesheet" href="/stylesheets/logs.css")
+  script(src="/logs.js")

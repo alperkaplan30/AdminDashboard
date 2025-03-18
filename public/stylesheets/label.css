@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #7c8c41;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #622e75;
+}
+
+
+.field {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    input[type="time"]:focus,
+    select:focus {
+        border-color: #4a90e2;
+        outline: none;
+    }
+
+
+.draggable {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    .draggable .field {
+        cursor: move;
+        padding: 0.5rem;
+        border: 1px dashed #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+
+        .draggable .field.dragging {
+            opacity: 0.5;
+        }
+
+
+button#save-button {
+    background-color: #c7cc9d;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+    button#save-button:hover {
+        background-color: #d8bee2;
+    }
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"],
+    select {
+        font-size: 0.9rem;
+    }
+
+    button#save-button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    footer {
+        width: 300px;
+    }
+}

@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  .main-container
+    .status-section
+      h1 STATUS
+      button#start-button Start Simulation
+
+      .toggle-container
+        each axis in ['x', 'y', 'z', 'g', 'r1', 'r3']
+          .axis-toggle
+            .toggle-wrapper
+              .axis-label
+                p #{axis.toUpperCase()}
+              input(id=`${axis}-toggle`, class="toggle", type="checkbox")
+              span.toggle-slider
+              .toggle-text.empty OFF
+              .toggle-text.full ON
+
+        .technical-service
+          .toggle-wrapper
+            .axis-label
+              p TECHNICAL SERVICE
+            input(id="technical-service-toggle", class="toggle", type="checkbox")
+            span.toggle-slider
+            .toggle-text.empty ALARM
+            .toggle-text.full WORKING
+
+    // DOORS Baþlýðý ve Toggle'lar
+    .doors-section
+      h2 DOORS
+      .toggle-container
+        each door in ['side1', 'side2', 'label']
+          .door-toggle
+            .toggle-wrapper
+              .door-label
+                p #{door.toUpperCase()}
+              input(id=`${door}-toggle`, class="toggle", type="checkbox")
+              span.toggle-slider
+              .toggle-text.empty OFF
+              .toggle-text.full ON
+
+    // SENSORS Baþlýðý ve Toggle'lar
+    .sensors-section
+      h2 SENSORS
+      .toggle-container
+        each sensor in ['side1', 'side2', 'label']
+          .sensor-toggle
+            .toggle-wrapper
+              .sensor-label
+                p #{sensor.toUpperCase()}
+              input(id=`${sensor}-toggle`, class="toggle", type="checkbox")
+              span.toggle-slider
+              .toggle-text.empty OFF
+              .toggle-text.full ON
+
+  link(rel="stylesheet" href="/stylesheets/robotStatus.css")
+  script(src="/robotStatus.js")
+

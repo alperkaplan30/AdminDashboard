@@ -1,0 +1,125 @@
+extends layout
+
+block content
+  .main-container
+    .left-section
+      .label-section
+        .print-label-container
+          h1 Print a Label
+          .label-details
+            .form-group-container
+              .form-group
+                label(for="label-name") Name:
+                input#label-name(type="text", placeholder="Enter label name", required)
+              .form-group
+                label(for="label-unit") Unit:
+                input#label-unit(type="text", placeholder="Enter unit", required)
+        .label-count
+          h2 Current Label Count
+          input#current-label-count(type="text", readonly value="0")
+        .current-labeling-tube-number
+          h2 Current Labeling Tube Number
+          input#current-labeling-tube-number(type="text", readonly value="0/0") 
+        .tube-toggle-wrapper
+          h2 Tube
+          .toggle-wrapper
+            input#tube-toggle(type="checkbox", class="toggle")
+            .toggle-text
+              p.off OFF
+              p.on ON
+          .tube-selection
+            h2 Tube Selection
+            .tube-options
+              .tube-option(style="background-color: gold;")
+                label(for="gold-select") Gold
+                input#gold-select(type="radio", name="tube-color", value="gold", disabled)
+                p#gold-tube-left  
+              .tube-option(style="background-color: blue;")
+                label(for="blue-select") Blue
+                input#blue-select(type="radio", name="tube-color", value="blue", disabled)
+                p#blue-tube-left   
+              .tube-option(style="background-color: purple;")
+                label(for="purple-select") Purple
+                input#purple-select(type="radio", name="tube-color", value="purple", disabled)
+                p#purple-tube-left 
+              .tube-option(style="background-color: red;")
+                label(for="red-select") Red
+                input#red-select(type="radio", name="tube-color", value="red", disabled)
+                p#red-tube-left 
+            button#print-button(disabled) Print
+        .load-section
+          .load-buttons
+            button#load-label-button Load Label
+            button#load-tube-button Load Tube
+
+    .right-section
+      .train-and-coordinates-wrapper
+        .train-section
+          h1 Train
+          .train-color-box
+            .train-stats
+              .tube-stat-box
+                .stat-box(style="background-color: gold; color: white;")
+                  p Gold:
+                  span#gold-count 0
+              .stat-box(style="background-color: blue; color: white;")
+                p Blue:
+                span#blue-count 0
+              .stat-box(style="background-color: purple; color: white;")
+                p Purple:
+                span#purple-count 0
+              .stat-box(style="background-color: red; color: white;")
+                p Red:
+                span#red-count 0
+              .stat-box(style="background-color: black; color:white;")
+                p Undecided:
+                span#undecided-count 0
+            .prediction-threshold
+              label(for="threshold") Prediction Threshold:
+              input#threshold(type="number", min="0", max="100", step="1")
+              span(%)
+              button#train-button Train
+
+        .coordinates-section
+          h1 Coordinates and Probabilities
+          .form-group
+            label(for="tube-color-select") Select Tube Color:
+            select#tube-color-select
+              option(value="gold") Gold
+              option(value="blue") Blue
+              option(value="purple") Purple
+              option(value="red") Red
+          .form-group
+            label(for="tube-number") Tube Number:
+            input#tube-number(type="number", min="1", value="1")
+          button#confirm-button Confirm
+          .coord-probabilities
+            .coord-details
+              h2 Coordinates for the Selected Tube
+              .coords-container
+                .coord-box-container
+                  .coord-box.x
+                    p X:
+                    span#coord-x 0
+                  .coord-box.y
+                    p Y:
+                    span#coord-y 0
+                  .coord-box.z
+                    p Z:
+                    span#coord-z 0
+                  .coord-box.g
+                    p G:
+                    span#coord-g 0
+                  .coord-box.r1
+                    p R1:
+                    span#coord-r1 0
+                  .coord-box.r3
+                    p R3:
+                    span#coord-r3 0
+            .probabilities
+              h2 Probabilities
+              .probabilities-box
+                p (Placeholder for probability data)
+
+  link(rel="stylesheet" href="/stylesheets/operations.css")
+  script(src="/operations.js")

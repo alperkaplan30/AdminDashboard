@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  .container
+    h1 Label
+
+    .section
+      h2 Patient Information
+      .draggable
+        .field
+          label(for="patient-name") Patient Name
+          input(type="text" id="patient-name" name="patient-name")
+        .field
+          label(for="age") Date of Birth
+          input(type="date" id="birth-date" name="birth-date")
+        .field
+          label(for="gender") Gender
+          select(id="gender" name="gender")
+            option(value="male") Male
+            option(value="female") Female
+
+    .section
+      h2 Sample Information
+      .draggable
+        .field
+          label(for="sample-date") Date of Sample Collection
+          input(type="date" id="sample-date" name="sample-date")
+        .field
+          label(for="sample-time") Time of Sample Collection
+          input(type="time" id="sample-time" name="sample-time")
+        .field
+          label(for="p") P:
+          input(type="number" id="p" name="p")
+        .field
+          label(for="barcode-number") Barcode Number
+          input(type="number" id="barcode-number" name="barcode-number")
+        .field
+          label(for="analysis-type") Type of Analysis
+          input(type="text" id="analysis-type" name="analysis-type")
+        .field
+          label(for="polyclinic-name") Polyclinic Name
+          input(type="text" id="polyclinic-name" name="polyclinic-name")
+
+    button#save-button Save
+
+
+
+    link(rel="stylesheet" href="/stylesheets/label.css")
+    script(src="/label.js")
